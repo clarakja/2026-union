@@ -65,7 +65,7 @@ elif menu == "장소 추가하기":
             if exists:
                 st.warning("이미 그 장소가 있습니다")
             else:
-                st.session_state.placelist = add_place(st.session_state.placelist, new_name, new_place_region, new_indoor, new_budget, new_description)
+                st.session_state.placelist = add_place(st.session_state.placelist, new_name, new_region, new_indoor, new_budget, new_description)
                 st.success("장소가 추가되었습니다.")
         else:
             st.warning("장소 이름을 입력하세요")
