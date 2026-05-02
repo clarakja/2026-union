@@ -35,13 +35,17 @@ def place_add(place_list,name,indoor,cost,rate,open,close,population):
     new_place = {
         "이름": name,
         "실내여부": indoor,
-        "예산": cost,
+        "비용": cost,
         "평점": rate,
         "개장시간": open,
         "폐장시간": close,
         "평균인파": population
     }
-    place_list.append(new_place)
+    if open < close:
+        place_list.append(new_place)
+        st.success("새로운 장소를 추가하였습니다.")
+    else:
+        st.warning("개장시간은 폐장시간보다 빨라야 합니다.")
 
 def place_search_by_number_total(result_input,key,min,jump,max):
     mode = st.radio(key + " 검색 기준을 선택하세요", ["전부", "기준 이상", "기준 이하"])
