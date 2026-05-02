@@ -31,6 +31,7 @@ def add_place(places):
         st.write("장소가 추가되었습니다.")
     else:
         st.write("정보를 입력해주세요.")
+        
 def show_all(places):
     st.subheader("전체 장소 보기")
     for place in places:
