@@ -29,9 +29,13 @@ def find_places(place_list, region, turf_condition, max_fee):
     return result
 
 def add_place(name, region, turf_condition, fee, description):
-    st.session_state.placelist.append({
-        "이름": name, "지역": region, "잔디상태": turf_condition, "시간당 사용료": fee, "한줄설명": description
-    })
+    if name == "":
+        st.warning("장소 이름은 반드시 입력해주세요.")
+    else:
+        st.session_state.placelist.append({
+            "이름": name, "지역": region, "잔디상태": turf_condition, "시간당 사용료": fee, "한줄설명": description
+        })
+        st.success("새 장소가 추가되었습니다.")
 
 st.title("강원생활도우미앱")
 
