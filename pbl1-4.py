@@ -45,7 +45,7 @@ def show_all(places):
 
 def show_recommendation():
     selected_region = st.selectbox("지역을 선택하세요", ["강릉","춘천","양양","고성","원주"])
-    selected_reserve = st.radion("예약 가능여부를 선택하세요", ["O","X"])
+    selected_reserve = st.radio("예약 가능여부를 선택하세요", ["O","X"])
     
     recommendations = get_recommendations(st.session_state.places, selected_region, selected_reserve)
 
