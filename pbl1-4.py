@@ -76,4 +76,4 @@ if menu == "전체 보기":
 elif menu == "추천 보기":
     show_recommendation()
 elif menu == "장소추가":
-    add_place()
+    add_place(places)
