@@ -43,7 +43,7 @@ def show_all(places):
         st.write("전화번호는",place["전화번호"],"입니다")
         st.write("---")
 
-def show_recomendation():
+def show_recommendation():
     selected_region = st.selectbox("지역을 선택하세요", ["강릉","춘천","양양","고성","원주"])
     selected_reserve = st.radion("예약 가능여부를 선택하세요", ["O","X"])
     
