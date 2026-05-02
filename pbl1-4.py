@@ -42,8 +42,11 @@ def show_all(places):
         st.write("예약 사이트는",place["예약 사이트"],"입니다")
         st.write("전화번호는",place["전화번호"],"입니다")
         st.write("---")
+        
 def get_recommendations(places, region, reserve):
     result = []
+    selected_region = st.selectbox("지역을 선택하세요", ["강릉","춘천","양양","원주","고성"])
+    selected_reserve = st.radio("예약 가능 여부를 선택하세요", ["O", "X"])
     for place in places:
         if place["지역"] == region and place["예약 가능 여부"] == reserve:
             result.append(place)
